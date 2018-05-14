@@ -17,17 +17,11 @@ Record (episode = "Deep Breath", season = 8, rating = 9.17, doctor = "Peter Capa
 Record (episode = "The Husbands of River Song", season = 9, rating = 7.69, doctor = "Peter Capaldi", writer = "Steven Moffat")
 ]
 
-def highest_rating(doctor_who):
-    highest = None
-    for record in doctor_who:
-        if highest == None:
-            highest = record
-        elif highest.rating > record.rating:
-            highest = record
-        return highest.episode
-season_list = {}
-for season_number in highest_rating(doctor_who):
-    if season_number == highest.episode:
-        season_list[season_number.season]= []
-    season_list[season_number.season].append(season_number)
-print(season_list)
+highest_rating ={}
+for watch in doctor_who:
+    if watch.rating not in highest_rating:
+        highest_rating[watch.season]=[]
+    highest_rating[watch.season].append(watch)
+print("season number and episode")
+for season in highest_rating:
+    print(highest_rating)
