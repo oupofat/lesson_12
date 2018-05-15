@@ -19,22 +19,10 @@ Record (episode = "Deep Breath", season = 8, rating = 9.17, doctor = "Peter Capa
 Record (episode = "The Husbands of River Song", season = 9, rating = 7.69, doctor = "Peter Capaldi", writer = "Steven Moffat")
 ]
 
-season_list = {}
-for episode_number in doctor_who:
-	if episode_number.season not in season_list:
-		season_list[episode_number.season]=[]
-	season_list[episode_number.season].append(episode_number)
-
-highest_rate={}
-for people_watch in doctor_who:
-	if people_watch.rating not in highest_rate:
-		highest_rate[people_watch.rating]=[]
-	highest_rate[people_watch.rating].append(people_watch)
-
-highest_rating = None
-for rating in season_list:
-	if highest_rating == None:
-		highest_rating = rating
-	elif highest_rating.rating > rating.rating:
-		highest_rating = rating
-print(highest_rate)
+highest_rated = {}
+for record in doctor_who:
+    if record.season not in highest_rated:
+        highest_rated[record.season]= record
+    elif record.rating > highest_rated[record.season].rating:
+        highest_rated[record.season]=record
+print (highest_rated)

@@ -23,5 +23,5 @@ for watch in doctor_who:
         highest_rating[watch.season]=[]
     highest_rating[watch.season].append(watch)
 print("season number and episode")
-for season in highest_rating:
+for season in highest_rating[]:
     print(highest_rating)
