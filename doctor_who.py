@@ -18,6 +18,10 @@ Record (episode = "Dinosaurs on a Spaceship", season = 7, rating = 7.57, doctor 
 Record (episode = "Deep Breath", season = 8, rating = 9.17, doctor = "Peter Capaldi", writer = "Steven Moffat"),
 Record (episode = "The Husbands of River Song", season = 9, rating = 7.69, doctor = "Peter Capaldi", writer = "Steven Moffat")
 ]
+
+#1. Group the episodes based on the writer. Return a dictionary with
+#the writer as the key and the list of episodes as the value.
+
 writer = {}
 for screenwriter in doctor_who:
     if screenwriter.writer not in writer:
